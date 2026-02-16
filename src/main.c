@@ -19,7 +19,7 @@ uint16_t last_adc[SERVO_COUNT] = {2048, 2048, 2048, 2048, 2048}; // Initialize l
 #define ANGLE_RANGE (ANGLE_MAX - ANGLE_MIN)  // 160°
 
 uint8_t ADC_to_Angle(uint16_t adc) {
-    // Mapuj CAŁY zakres ADC (0-4095) na bezpieczny zakres kąta
+    // map ADC value (0-4095) to angle (10-170 degrees)
     uint32_t angle = ANGLE_MIN + ((uint32_t)adc * ANGLE_RANGE) / 4095;
     return (uint8_t)angle;
 }
