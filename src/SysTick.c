@@ -11,7 +11,9 @@ void SysTick_Handler(void){
 void SysTick_Init(void) {
     SysTick->LOAD = 72000 - 1; // Set reload value for 1ms (assuming 72MHz clock)
     SysTick->VAL = 0; // Clear current value
-    SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_TICKINT_Msk | SysTick_CTRL_ENABLE_Msk; // Enable SysTick timer with interrupt
+    SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | 
+                      SysTick_CTRL_TICKINT_Msk |
+                      SysTick_CTRL_ENABLE_Msk; // Enable SysTick timer with interrupt
 }
 
 uint32_t SysTick_Get(void) {
