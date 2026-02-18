@@ -32,7 +32,4 @@ uint16_t ADC_READ(uint8_t channel) {
     return ADC1->DR; // Return the converted value
 }
 
-// uint16_t ADC_MapToServo(uint16_t adc_value) {
-//     // Map the ADC value (0-4095) to a servo control value (0-180 degrees)
-//     return (adc_value * 1000) / 4095 + 1000; // Map to 1000-2000 microseconds for servo control
-// }
+
